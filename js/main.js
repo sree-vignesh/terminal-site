@@ -13,6 +13,10 @@ setTimeout(function () {
   loopLines(banner, "", 80);
   textarea.focus();
 }, 100);
+setTimeout(function () {
+  loopLines(help, "", 80);
+  textarea.focus();
+}, 1100);
 
 window.addEventListener("keyup", enterKey);
 

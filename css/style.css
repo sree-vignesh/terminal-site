@@ -3,7 +3,15 @@
   --bgcolor:#0c161d;
 }
 /* @import url('https://unpkg.com/@catppuccin/palette/css/catppuccin.css'); */
-
+#canvas{
+  position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Send it to the back */
+            padding:15px;
+}
 body {
     margin: 0;
     padding: 15px 20px;
@@ -14,6 +22,7 @@ body {
     background: var(--bgcolor);
     font-family: cursor, monospace;
     overflow-x: hidden;
+    /* overflow-y: hidden; */
   }
   ::selection {
     color: #211830;

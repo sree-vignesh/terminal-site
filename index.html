@@ -5,35 +5,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sree Vignesh | Terminal</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
-    <!-- <link rel="icon" type="image/x-icon" href="img/fav-icon.png" /> -->
-    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-    <link rel="manifest" href="favicons/site.webmanifest">
-  </head>
-  <body>
-    <div id="terminal">
-      <a id="before"></a>
-    </div>
-    <div id="command" onclick="$('texter').focus();">
-      <textarea
-        type="text"
-        id="texter"
-        onkeyup="typeIt(this, event)"
-        onkeydown="typeIt(this, event); 
-                   moveIt(this.value.length, event)"
-        onkeypress="typeIt(this, event);"
-        autofocus
-      ></textarea>
-      <div id="liner">
-        <span id="typer"></span><b class="cursor" id="cursor">█</b>
-      </div>
-    </div>
-    <script src="js/caret.js"></script>
-    <script src="js/banner.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/gradient.css"
+    />
 
-    <script src="js/commands.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+    <!-- <link rel="icon" type="image/x-icon" href="img/fav-icon.png" /> -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicons/site.webmanifest" />
+  </head>
+  <div id="canvas">
+    <body>
+      <div id="terminal">
+        <a id="before"></a>
+      </div>
+      <div id="command" onclick="$('texter').focus();">
+        <textarea
+          type="text"
+          id="texter"
+          onkeyup="typeIt(this, event)"
+          onkeydown="typeIt(this, event); 
+                   moveIt(this.value.length, event)"
+          onkeypress="typeIt(this, event);"
+          autofocus
+        ></textarea>
+        <div id="liner">
+          <span id="typer"></span><b class="cursor" id="cursor">█</b>
+        </div>
+      </div>
+      <script src="js/caret.js"></script>
+      <script src="js/banner.js"></script>
+
+      <script src="js/commands.js"></script>
+      <script src="js/main.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+      <script>
+        VANTA.FOG({
+          // el: "#canvas",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.0,
+          minWidth: 200.0,
+          highlightColor: 0x0,
+          midtoneColor: 0x0,
+          lowlightColor: 0x0,
+          baseColor: 0xd3c04,
+          blurFactor: 0.73,
+          speed: 1.6,
+          zoom: 1.2,
+        });
+      </script>
+    </body>
+  </div>
 </html>
